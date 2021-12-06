@@ -8,7 +8,7 @@ const awsmobile = {
     "aws_user_pools_id": "ap-northeast-2_Dp8Jagnaa",
     "aws_user_pools_web_client_id": "5ct0804c6fodinigao4ibnicmf",
     "oauth": {
-        "domain": "testmachlake.auth.ap-northeast-2.amazoncognito.com",
+        "domain": "testbuildc89ff5aa-c89ff5aa-testdev.auth.ap-northeast-2.amazoncognito.com",
         "scope": [
             "phone",
             "email",
