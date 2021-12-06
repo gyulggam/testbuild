@@ -51,6 +51,7 @@ export const actions = {
 
     async googleLogin() {
         await Auth.federatedSignIn({provider: 'Google'});
+        // await Auth.federatedSignIn({provider: CognitoHostedUIIdentityProvider.Google});
     }
 
 }

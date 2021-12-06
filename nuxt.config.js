@@ -5,7 +5,7 @@ export default {
         port: 5000, // default: 3000
         host: 'localhost'
     },
-    ssr: false,
+    ssr: true,
 
     env: {
         STRIPE_PK: "pk_test_51JyUa8LxhYn7H10DYl2XbfDCp4rM2oJISiCAYaUyVcMTgAp1Q2Fkq4X2t6HbuguKtAoGQYCzQPAnK2DfbQkotRtY00vrgc3FjZ",
