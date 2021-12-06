@@ -53,35 +53,6 @@ export default {
         ],
     },
 
-    auth: {
-        strategies: {
-            awsCognito: {
-                scheme: "oauth2",
-                endpoints: {
-                    authorization: "https://testmachlake.auth.ap-northeast-2.amazoncognito.com/login",
-                    token: "https://testmachlake.auth.ap-northeast-2.amazoncognito.com/oauth2/token",
-                    userInfo: "https://testmachlake.auth.ap-northeast-2.amazoncognito.com/oauth2/userInfo",
-                    logout: "https://testmachlake.auth.ap-northeast-2.amazoncognito.com/logout"
-                },
-                token: {
-                    property: "access_token",
-                    type: "Bearer",
-                    maxAge: 3600
-                },
-                refreshToken: {
-                    property: "refresh_token",
-                    maxAge: 60 * 60 * 24 * 30
-                },
-                responseType: "token",
-                redirectUri: "https://test.machlake.com/login",
-                logoutRedirectUri: "https://test.machlake.com/login",
-                clientId: "5ct0804c6fodinigao4ibnicmf",
-                scope: ["email", "openid", "profile"],
-                codeChallengeMethod: "S256"
-            },
-        },
-    },
-
     // Global CSS: https://go.nuxtjs.dev/config-css
     css: ['@/assets/scss/core.scss'],
 
