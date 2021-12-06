@@ -20,7 +20,7 @@ const awsmobile = {
         "redirectSignOut": "https://test.machlake.com/login",
         "responseType": "code"
     },
-    "federationTarget": "COGNITO_USER_POOLS",
+    "federationTarget": "GOOGLE",
     "aws_cognito_login_mechanisms": [
         "PREFERRED_USERNAME"
     ],
