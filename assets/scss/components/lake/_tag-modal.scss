@@ -1,0 +1,75 @@
+.tag-modal {
+    &__content-head {
+        margin-bottom: 50px;
+        .lake-name {
+            font-size: 20px;
+            line-height: 29px;
+            color: #828282;
+        }
+        .group-btn {
+            .btn-icon {
+                background: white;
+                border: 1px solid white;
+                border: none;
+                padding: 10px 20px;
+                box-sizing: border-box;
+                box-shadow: none;
+                margin-right: 5px;
+                i {
+                    margin-right: 10px;
+                }
+                &:hover {
+                    cursor: pointer;
+                    background: #f2f2f2;
+                }
+            }
+        }
+    }
+    &__content {
+        .wrapper-btn-done {
+            text-align: right;
+            margin-bottom: 30px;
+            button {
+                background: #828282;
+                border-radius: 4px;
+                color: white;
+                border: none;
+                width: 72px;
+                height: 26px;
+                cursor: pointer;
+            }
+        }
+        .group-edit-tag-table {
+            display: flex;
+            justify-content: flex-end;
+            button {
+                border: 1px solid #C4C4C4;
+                box-sizing: border-box;
+                border-radius: 3px;
+                background: white;
+                padding: 3px 36px 3px 36px;
+                &:last-child {
+                    margin-left: 6px;
+                }
+            }
+        }
+        .input-tag-table {
+            background: #F8F8F8;
+            border: 1px solid #F0F0F0;
+            box-sizing: border-box;
+            height: 28px;
+            padding-left: 10px;
+        }
+        .btn-delete-tag-table {
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            background: #F2F2F2;
+            border: none;
+            cursor: pointer;
+            .far {
+                margin-bottom: 8px;
+            }
+        }
+    }
+}

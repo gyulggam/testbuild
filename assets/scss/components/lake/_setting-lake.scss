@@ -1,0 +1,46 @@
+@import "~/assets/scss/base/const.scss";
+
+.setting {
+    &-wrap {
+        width: 100%;
+        padding: 80px 0;
+    }
+
+    &-content {
+        width: 700px;
+        min-width: 680px;
+        font-size: 18px;
+        font-weight: 500;
+
+        &-main-title {
+            font-size: 30px;
+            margin-bottom: 70px;
+            line-height: 40px;
+            
+            i {
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.updatelake {
+    &-sidebtn {
+        background-color: $primary-color;
+        color: $default-white;
+        padding: 5px 25px;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+
+    &-mainbtn {
+        width: 30%;
+        font-size: 25px;
+        font-weight: normal;
+        background-color: $primary-color;
+        color: $default-white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}

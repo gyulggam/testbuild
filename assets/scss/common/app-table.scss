@@ -1,0 +1,66 @@
+@import "~/assets/scss/base/const.scss";
+
+.app-table {
+    .table-content {
+        max-height: 600px;
+        overflow-y: auto;
+    }
+    .ve-table .ve-table-container .ve-table-content.ve-table-border-x tr:first-child>th {
+        border-top: none;
+        border-bottom: 1px solid #C4C4C4;
+        background: white;
+    }
+    .ve-table table.ve-table-content tbody.ve-table-body tr.ve-table-body-tr:nth-child(odd),
+    .ve-table table.ve-table-content tbody.ve-table-body tr.ve-table-expand-tr:nth-child(odd) {
+        background: #FDFDFD;
+    }
+    .ve-table table.ve-table-content tbody.ve-table-body tr.ve-table-body-tr td.ve-table-body-td,
+    .ve-table table.ve-table-content tbody.ve-table-body tr.ve-table-body-tr td.ve-table-expand-td {
+        background: transparent;
+    }
+    .ve-table .ve-table-container .ve-table-content tbody.ve-table-body .ve-table-body-tr .ve-table-body-td .ve-table-row-expand-icon {
+        display: none;
+    }
+    .table-pagination {
+        margin-top: 30px;
+        display: flex;
+        .table__frm-search {
+            margin-left: auto;
+            .input-search {
+                border-left: none;
+                border-right: none;
+                border-top: none;
+                border-bottom: 2px solid #c4c4c4;
+                background: none;
+                outline: none;
+                font-size: 1rem;
+                padding: 0 5px;
+            }
+        }
+
+        .ve-pagination-li {
+            border: none;
+        }
+
+        .ve-pagination {
+            .ve-pagination-li.ve-pagination-li-active {
+                a {
+                    color: $default-black;
+                }
+            }
+        }
+
+        .ve-pagination-total {
+            display: none;
+        }
+
+        .ve-pagination-goto {
+            display: none;
+        }
+
+        .ve-dropdown-dt-selected {
+            display: none;
+        }
+    }
+}
+

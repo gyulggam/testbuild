@@ -1,0 +1,153 @@
+@import "~/assets/scss/base/const.scss";
+
+.app-modal-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: auto;
+    outline: 0;
+    text-align: center;
+    -webkit-overflow-scrolling: touch;
+}
+
+.app-modal-root {
+    .app-modal-overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        z-index: 1000;
+    }
+    &:nth-child(1) {
+        .app-modal-overlay {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    }
+    &:nth-child(2) {
+        .app-modal-overlay {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+    }
+    &:nth-child(3) {
+        .app-modal-overlay {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+.app-modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.app-modal-components {
+    position: relative;
+    background: #fff;
+    box-shadow: 0 3px 6px 2px rgba(142, 142, 142, 0.1);
+    border-radius: 14px;
+    max-height: 700px;
+    overflow-y: auto;
+}
+
+.app-modal--centered {
+    // &:before {
+    //     content: '';
+    //     display: inline-block;
+    //     width: 0;
+    //     height: 100%;
+    //     vertical-align: middle;
+    // }
+    .app-modal {
+        top: 0;
+        vertical-align: middle;
+    }
+}
+
+.app-modal-close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-left: auto;
+    border: none;
+    background: none;
+}
+
+.app-modal--size-md {
+    .app-modal-header {
+        position: relative;
+        padding: 10px 25px;
+        text-align: left;
+    }
+    .app-modal-content {
+        padding: 15px 25px;
+    }
+    .app-modal-footer {
+        padding: 2rem 2.6rem;
+        text-align: center;
+        .justify-content-end {
+            justify-content: center;
+        }
+        .btn-cancel {
+            height: 30px;
+            padding: 0 30px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            background-color: $default-lightgray;
+        }
+        .btn-confirm {
+            margin-right: 30px;
+            height: 30px;
+            padding: 0 30px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            background-color: $primary-color;
+            color: $default-white;
+        }
+    }
+    .app-modal-title {
+        font-size: 30px;
+        font-weight: 400;
+    }
+}
+
+.app-modal--size-sm {
+    .app-modal-header,
+    .app-modal-content,
+    .app-modal-footer {
+        padding: 1.5rem 2.2rem;
+    }
+    .app-modal-title,
+    .app-modal-close {
+        font-size: 14px;
+    }
+}
+
+.modal-content {
+    padding: 30px 0;
+}
+
+.modal-bottom {
+    padding: 20px 0 10px;
+}
+
+.show-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}

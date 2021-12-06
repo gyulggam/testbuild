@@ -1,0 +1,30 @@
+@import "~/assets/scss/base/const.scss";
+
+.access {
+    &-header {
+        font-size: 16px;
+    }
+
+    &-content {
+        &-list {
+            &-header,
+            &-item {
+                display: grid;
+                width: 100%;
+                grid-template-columns: 65% 25% 5%;
+                grid-column-gap: 20px;
+                align-items: center;
+    
+                .access-btn {
+                    font-size: 25px;
+                    font-weight: 900;
+                    cursor: pointer;
+                }
+
+                input::placeholder {
+                    color: $input-placeholder;
+                }
+            }
+        }
+    }
+}

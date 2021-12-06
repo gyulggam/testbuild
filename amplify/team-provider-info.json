@@ -1,0 +1,59 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-machlakelocaltest-dev-102436-authRole",
+      "UnauthRoleArn": "arn:aws:iam::306064049777:role/amplify-machlakelocaltest-dev-102436-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::306064049777:role/amplify-machlakelocaltest-dev-102436-authRole",
+      "Region": "ap-northeast-2",
+      "DeploymentBucketName": "amplify-machlakelocaltest-dev-102436-deployment",
+      "UnauthRoleName": "amplify-machlakelocaltest-dev-102436-unauthRole",
+      "StackName": "amplify-machlakelocaltest-dev-102436",
+      "StackId": "arn:aws:cloudformation:ap-northeast-2:306064049777:stack/amplify-machlakelocaltest-dev-102436/266ea090-3dd7-11ec-8cae-02dbca215fa8",
+      "AmplifyAppId": "d4svqz1ytx9mq"
+    },
+    "categories": {
+      "function": {
+        "machlakelocaltestd76c65ddCustomMessage": {
+          "REDIRECTURL": "http://localhost:5000/lake",
+          "EMAILSUBJECT": "",
+          "EMAILMESSAGE": "",
+          "deploymentBucketName": "amplify-machlakelocaltest-dev-102436-deployment",
+          "s3Key": "amplify-builds/machlakelocaltestd76c65ddCustomMessage-2f4d687079574d6b6739-build.zip"
+        }
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d4svqz1ytx9mq",
+          "type": "manual"
+        }
+      },
+      "auth": {
+        "machlakelocaltest630bd7ba": {}
+      }
+    }
+  },
+  "devback": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-machlakelocaltest-devback-111521-authRole",
+      "UnauthRoleArn": "arn:aws:iam::306064049777:role/amplify-machlakelocaltest-devback-111521-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::306064049777:role/amplify-machlakelocaltest-devback-111521-authRole",
+      "Region": "ap-northeast-2",
+      "DeploymentBucketName": "amplify-machlakelocaltest-devback-111521-deployment",
+      "UnauthRoleName": "amplify-machlakelocaltest-devback-111521-unauthRole",
+      "StackName": "amplify-machlakelocaltest-devback-111521",
+      "StackId": "arn:aws:cloudformation:ap-northeast-2:306064049777:stack/amplify-machlakelocaltest-devback-111521/3d11bf10-3dde-11ec-bcc4-0659c6d532e8",
+      "AmplifyAppId": "d34kqdg5qakhc"
+    },
+    "categories": {
+      "auth": {
+        "machlakelocaltest630bd7ba": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d34kqdg5qakhc",
+          "type": "manual"
+        }
+      }
+    }
+  }
+}

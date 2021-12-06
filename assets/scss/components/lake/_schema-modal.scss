@@ -1,0 +1,44 @@
+.schema-modal {
+    max-height: 350px;
+    overflow-y: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    .tagmeta,
+    .value {
+        &-box {
+            width: 100%;
+        }
+
+        &-header,
+        &-item {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 47% 47%;
+            grid-column-gap: 5%;
+            align-items: center;
+        }
+    }
+
+    .frm-base{
+        text-align: left;
+        margin-top:10px;
+    }
+
+    input{
+        width: 100%;
+    }
+
+    .column-type {
+        font-size: 12px;
+        padding: 2px;
+        border-radius: 3px;
+        background-color: #e4ffee;
+        color: #6ad98d;
+    }
+
+    .column-hint {
+        font-size: 12px;
+        font-weight: 500;
+    }
+}

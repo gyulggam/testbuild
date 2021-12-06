@@ -1,0 +1,25 @@
+.progress-bar {
+    .progress-bar__current {
+        background-color: #f7f7f7;
+        max-width: 160px;
+        height: 12px;
+        width: 100%;
+
+        .progress-info {
+            color: #fff;
+            background-color: #c4c4c4;
+            text-align: center;
+            height: 100%;
+        }
+    }
+
+    .progress-bar__status {
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+    .progress-bar-detail {
+        font-size: 15px;
+        font-weight: 500;
+    }
+}

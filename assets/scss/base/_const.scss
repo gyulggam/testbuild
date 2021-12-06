@@ -1,0 +1,26 @@
+$colors: (
+    primary: '#ccc',
+);
+
+$default-red: #dd4f40;
+$default-green: #6ad98d;
+$default-blue: #6d9fff;
+$default-white: #f7f7f7;
+$default-black: #666;
+$default-gray: #707070;
+$default-lightgray: #f2f2f2;
+$default-border: 1px solid #c4c4c4;
+$default-disable: #b6b6b6;
+
+$primary-color: #ec7676;
+$secondary-color: #505050;
+$text-default-color: $default-black;
+$text-secondary-color: #505050;
+$text-disable-color: $default-lightgray;
+$positive-background-color: #e4ffee;
+$positive-color: $default-green;
+$denial-background-color: #fff6f5;
+$denial-color: $default-red;
+$select-border-color: #8e8e8e;
+$input-background-color: $default-lightgray;
+$input-placeholder: $default-disable;

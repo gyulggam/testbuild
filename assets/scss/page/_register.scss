@@ -1,0 +1,84 @@
+@import "~/assets/scss/base/const.scss";
+
+.register {
+    &-page {
+        width: 100%;
+        max-width: 1200px;
+
+        &-title {
+            font-size: 50px;
+            font-weight: 500;
+        }
+    
+        &-img-wrap {
+            width: 40%;
+        }
+
+        &-form-wrap {
+            width: 60%;
+
+            .section-card-input {
+                height: 40px;
+                padding: 0 15px;
+                border: none;
+                border-radius: 5px;
+            }
+        }
+
+        &-required {
+            width: 45%;
+            padding: 0 5%;
+        }
+
+        &-optional {
+            width: 45%;
+            padding: 0 5%;
+        }
+
+        &-discription {
+            li {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .confirm-btn {
+            width: 100%;
+            padding: 7px 20px;
+            color: $default-white;
+            border: none;
+            border-radius: 5px;
+            background-color: $default-gray;
+            cursor: pointer;
+        }
+    }
+
+    &-header {
+        flex: 1;
+    }
+
+    &-content {
+        flex: 5;
+    }
+
+    &-mainimg {
+        width: 350px;
+        height: 250px;
+    }
+
+    &-link {
+        margin-top: 5px;
+    }
+
+    &-btn {
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 10px;
+        padding: 7px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: $primary-color;
+        color: $default-white;
+        cursor: pointer;
+    }
+}

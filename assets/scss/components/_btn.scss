@@ -1,0 +1,162 @@
+.mBtn {
+    display: inline-block;
+    text-decoration: none;
+    transition: all ease 0.8s;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    cursor: pointer;
+    background: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 32px;
+    min-width: 70px;
+    transform: all ease 0.8s;
+    &.mBtn--green {
+        border: 1px solid #3b8070;
+        color: #3b8070;
+        &:hover {
+            color: #fff;
+            background-color: #3b8070;
+        }
+    }
+
+    &.mBtn--grey {
+        border: 1px solid #35495e;
+        color: #35495e;
+        margin-left: 15px;
+        &:hover {
+            color: #fff;
+            background-color: #35495e;
+        }
+    }
+
+    &.mBtn-login {
+        cursor: pointer;
+        &:hover {
+            color: #fff;
+            background-color: #3b8070;
+        }
+    }
+    &.mBtn-addLake {
+        display: block;
+        width: 100%;
+        height: 243px;
+        text-align: center;
+        cursor: pointer;
+        border: 1px dashed transparent;
+        border-radius: 14px;
+        transition: all ease 0.8s;
+        color: #a2a2a2;
+        background: #fff;
+        i.fal {
+            @include dis(middle);
+        }
+        span {
+            font-size: 25px;
+            @include dis(middle);
+        }
+        &:hover {
+            background-color: #ddd;
+        }
+    }
+    &.mBtn-small-addlake {
+        background-color: $primary-color;
+        border-radius: 6px;
+        color: $default-white;
+        min-width: 110px;
+        font-weight: 600;
+        font-size: 15px;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    &.mBtn-create {
+        transition: all ease 0.8s;
+        border: 1px solid #c4c4c4;
+        box-sizing: border-box;
+        border-radius: 4px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 23px;
+        text-align: center;
+        cursor: pointer;
+        background: none;
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 32px;
+        &:hover {
+            background-color: #ddd;
+        }
+    }
+    &.mbtn-click {
+        margin: 0;
+        width: 100%;
+        &:hover {
+            background-color: #ddd;
+        }
+    }
+
+    &.mBtn-button {
+        margin: 0 0 10px;
+        min-width: 110px;
+        text-align: center;
+        color: $default-black;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 20px;
+    }
+
+    &.mBtn-etc-button {
+        min-width: 33px;
+    }
+
+    &.mBtn--no-border {
+        border: none;
+    }
+
+    &.mBtn--icon {
+        cursor: pointer;
+        border: none;
+        padding: 5px;
+        line-height: 30px;
+        min-width: unset;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.custum-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    height: 30px;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.checkbox-btn {
+    padding: 5px 25px;
+    height: 30px;
+    border-radius: 2px;
+    color: $default-white;
+    cursor: pointer;
+
+    i {
+        font-weight: 500;
+    }
+}
+
+.active-background {
+    background-color: $positive-background-color;
+    color: $default-green;
+}
+
+.denial-background {
+    background-color: $denial-color;
+    color: $default-white;
+}

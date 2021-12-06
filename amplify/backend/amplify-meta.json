@@ -1,0 +1,74 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-machlakelocaltest-devback-111521-authRole",
+      "UnauthRoleArn": "arn:aws:iam::306064049777:role/amplify-machlakelocaltest-devback-111521-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::306064049777:role/amplify-machlakelocaltest-devback-111521-authRole",
+      "Region": "ap-northeast-2",
+      "DeploymentBucketName": "amplify-machlakelocaltest-devback-111521-deployment",
+      "UnauthRoleName": "amplify-machlakelocaltest-devback-111521-unauthRole",
+      "StackName": "amplify-machlakelocaltest-devback-111521",
+      "StackId": "arn:aws:cloudformation:ap-northeast-2:306064049777:stack/amplify-machlakelocaltest-devback-111521/3d11bf10-3dde-11ec-bcc4-0659c6d532e8",
+      "AmplifyAppId": "d34kqdg5qakhc"
+    }
+  },
+  "function": {},
+  "auth": {
+    "machlakelocaltest630bd7ba": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "loginMechanisms": [
+          "PREFERRED_USERNAME"
+        ],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-machlakelocaltest-devback-111521-deployment/amplify-cfn-templates/auth/machlakelocaltest630bd7ba-cloudformation-template.yml",
+        "logicalId": "authmachlakelocaltest630bd7ba"
+      },
+      "lastPushTimeStamp": "2021-11-05T02:34:02.006Z",
+      "output": {
+        "UserPoolId": "ap-northeast-2_EH5og3Z21",
+        "AppClientIDWeb": "3lir2q9r0m86qucj0n5f75k2sc",
+        "AppClientID": "5bjdk8bba3f7snnugo041go8k5",
+        "HostedUIDomain": "machlakelocaltest630bd7ba-630bd7ba-devback",
+        "IdentityPoolId": "ap-northeast-2:32a0e87d-0257-4064-b435-f215c7df842b",
+        "UserPoolArn": "arn:aws:cognito-idp:ap-northeast-2:306064049777:userpool/ap-northeast-2_EH5og3Z21",
+        "IdentityPoolName": "machlakelocaltest630bd7ba_identitypool_630bd7ba__devback",
+        "OAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:5000/\"],\"LogoutURLs\":[\"http://localhost:5000/\"]}",
+        "UserPoolName": "machlakelocaltest630bd7ba_userpool_630bd7ba"
+      },
+      "lastPushDirHash": "CoJBl9c7dnwGS40/KfKbs32Xg9w="
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "providerPlugin": "awscloudformation",
+      "type": "manual",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-machlakelocaltest-devback-111521-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
+        "logicalId": "hostingamplifyhosting"
+      },
+      "lastPushTimeStamp": "2021-11-05T02:34:02.006Z",
+      "output": {},
+      "lastPushDirHash": "/+VZ33seFFqAr6wbtptwbINUfSA="
+    }
+  }
+}

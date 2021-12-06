@@ -1,0 +1,12 @@
+{
+  "dev": {
+    "configLevel": "project",
+    "useProfile": false,
+    "awsConfigFilePath": "C:\\Users\\manag\\.amplify\\awscloudformation\\wGMLwPnexi"
+  },
+  "devback": {
+    "configLevel": "project",
+    "useProfile": false,
+    "awsConfigFilePath": "C:\\Users\\manag\\.amplify\\awscloudformation\\aQzubV55AZ"
+  }
+}

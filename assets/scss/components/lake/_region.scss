@@ -1,0 +1,47 @@
+@import "~/assets/scss/base/const.scss";
+
+.region {
+    &-box {
+        input {
+            height: 35px;
+        }
+    }
+    
+    &-select {
+        height: 38px;
+        border-radius: 4px;
+        background-color: $default-lightgray;
+
+        // & > div {
+        //     border: none;
+        //     background-color: $input-background-color;
+        //     border-bottom: $default-border;
+        // }
+
+        .vs__dropdown-toggle {
+            padding: unset;
+        }
+
+        input {
+            border: none;
+            margin: unset;
+
+            &::placeholder {
+                color: $input-placeholder;
+            }
+        }
+    }
+
+    &-content {
+        &-now {
+            padding: 10px 15px;
+
+            &-label {
+                padding: 0 15px;
+                border-radius: 4px;
+                background-color: $positive-background-color;
+                color: $default-green;
+            }
+        }
+    }
+}

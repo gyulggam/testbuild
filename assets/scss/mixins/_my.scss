@@ -1,0 +1,192 @@
+@mixin center-vertically() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include prefix(transform, translate(-50%, -50%), 'webkit' 'ms');
+}
+
+@mixin dis($pos) {
+    display: inline-block;
+    vertical-align: $pos;
+}
+
+@mixin bg($img, $rep, $post) {
+    background-image: url(#{$image-path}/#{$img});
+    background-repeat: $rep;
+    background-position: $post;
+}
+
+@mixin bgs($img, $rep, $post, $size) {
+    background-image: url(#{$image-path}/#{$img});
+    background-repeat: $rep;
+    background-position: $post;
+    -webkit-background-size: $size;
+    background-size: $size;
+}
+
+@mixin rsul() {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin bor($color) {
+    border: 1px solid $color;
+}
+
+@mixin opacity($val) {
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$val*100})';
+    filter: alpha(opacity=#{$val * 100});
+    -moz-opacity: $val;
+    -khtml-opacity: $val;
+    opacity: $val;
+}
+
+@mixin fonts($name, $namefile: '', $fontWeight: '', $fontstyle: '') {
+    @font-face {
+        @if ($namefile != '') {
+            font-family: $name;
+            src: url('#{$fonts-path}/#{$namefile}.eot');
+            src: url('#{$fonts-path}/#{$namefile}.eot?#iefix')
+                    format('embedded-opentype'),
+                url('#{$fonts-path}/#{$namefile}.woff') format('woff'),
+                url('#{$fonts-path}/#{$namefile}.ttf') format('truetype'),
+                url('#{$fonts-path}/#{$namefile}.svg##{$name}') format('svg');
+            font-style: $fontstyle;
+            font-weight: $fontWeight;
+        } @else {
+            font-family: $name;
+            src: url('#{$fonts-path}/#{$name}.eot');
+            src: url('#{$fonts-path}/#{$name}.eot?#iefix')
+                    format('embedded-opentype'),
+                url('#{$fonts-path}/#{$name}.woff') format('woff'),
+                url('#{$fonts-path}/#{$name}.ttf') format('truetype'),
+                url('#{$fonts-path}/#{$name}.svg##{$name}') format('svg');
+            font-style: normal;
+            font-weight: normal;
+        }
+    }
+}
+
+/**
+ * @alias element
+ */
+@mixin e($elements...) {
+    $addElements: '';
+
+    @if length($elements) >1 {
+        @for $i from 2 through length($elements) {
+            $addElements: $addElements + '#{&}__'+nth($elements, $i);
+        }
+    }
+
+    // We need to set the first modifier "by hand" to avoid nesting
+    &__#{nth($elements, 1)}#{$addElements} {
+        @content;
+    }
+}
+
+/**
+ * @alias modifier
+ */
+@mixin m($modifiers...) {
+    $addModifiers: '';
+
+    @if length($modifiers) >1 {
+        @for $i from 2 through length($modifiers) {
+            $addModifiers: $addModifiers + '#{&}--'+nth($modifiers, $i);
+        }
+    }
+
+    // We need to set the first modifier "by hand" to avoid nesting
+    &--#{nth($modifiers, 1)}#{$addModifiers} {
+        @content;
+    }
+}
+
+@mixin screen($size) {
+    @media screen and (max-width: $size) {
+        @content;
+    }
+}
+
+@mixin position($position, $args) {
+    @each $o in top right bottom left {
+        $i: index($args, $o);
+
+        @if $i and
+            $i +
+            1
+            <=length($args) and
+            type-of(nth($args, $i + 1))
+            ==number
+        {
+            #{$o}: nth($args, $i + 1);
+        }
+    }
+
+    position: $position;
+}
+
+// Positioning helpers
+@mixin absolute($args: '') {
+    @include position(absolute, $args);
+}
+
+@mixin fixed($args: '') {
+    @include position(fixed, $args);
+}
+
+@mixin relative($args: '') {
+    @include position(relative, $args);
+}
+
+@mixin prefix($property, $value, $vendors: webkit moz ms o, $default: true) {
+    @if $vendors {
+        @each $vendor in $vendors {
+            #{"-" + $vendor + "-" + $property}: #{$value};
+        }
+    }
+
+    @if $default {
+        #{$property}: #{$value};
+    }
+}
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+@mixin gradient($start-color, $end-color, $orientation) {
+    background: $start-color;
+
+    @if $orientation== 'vertical' {
+        background: -webkit-linear-gradient(top, $start-color, $end-color);
+        background: linear-gradient(to bottom, $start-color, $end-color);
+    } @else if $orientation== 'horizontal' {
+        background: -webkit-linear-gradient(left, $start-color, $end-color);
+        background: linear-gradient(to right, $start-color, $end-color);
+    } @else {
+        background: -webkit-radial-gradient(
+            center,
+            ellipse cover,
+            $start-color,
+            $end-color
+        );
+        background: radial-gradient(
+            ellipse at center,
+            $start-color,
+            $end-color
+        );
+    }
+}

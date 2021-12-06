@@ -1,0 +1,133 @@
+@import "~/assets/scss/base/const.scss";
+
+.createlake {
+    &-wrap {
+        width: 100%;
+        padding: 80px 0;
+    }
+
+    &-content {
+        width: 70%;
+        min-width: 680px;
+        font-size: 18px;
+        font-weight: 500;
+
+        &-main-title {
+            font-size: 30px;
+            margin-bottom: 70px;
+            line-height: 40px;
+        }
+    }
+
+    &-btn {
+        background-color: $primary-color;
+        color: $default-white;
+        padding: 5px 25px;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+
+    &-mainbtn {
+        width: 30%;
+        font-size: 25px;
+        font-weight: normal;
+        background-color: $primary-color;
+        color: $default-white;
+        padding: 15px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+.confirm-createlake {
+    &-wrap {
+        margin-top: 80px;
+        padding: 0;
+    }
+
+    &-header {
+        .close-btn {
+            width: 30px;
+            height: 30px;
+            color: $default-gray;
+            border: none;
+            background: none;
+            padding: 10px 15px 0 0;
+            cursor: pointer;
+        }
+
+        .lake-iconbox {
+            border: 2px solid #707070;
+            box-sizing: border-box;
+            border-radius: 8px;
+            padding: 5px 10px;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &-content {
+        &-default {
+            padding: 30px 15%;
+        }
+
+        &-detail {
+            padding: 30px 0 30px 35px;
+        }
+    }
+
+    &-schema {
+        .tagmeta-box-detail,
+        .value-box-detail {
+            padding-left: 20%;
+            padding-right: 15%;
+
+            &-header,
+            &-item {
+                display: grid;
+                width: 100%;
+                grid-template-columns: 45% 31% 9%;
+                grid-column-gap: 3%;
+                align-items: center;
+            }
+        }
+    }
+
+    &-acl {
+        .acl-box-detail {
+            &-header,
+            &-item {
+                display: grid;
+                width: 100%;
+                grid-template-columns: 65% 25%;
+                grid-column-gap: 20px;
+                align-items: center;
+            }
+        }
+    }
+    
+    &-footer {
+        .detail-view-btn {
+            background-color: $default-lightgray;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .createlake-btn {
+            background-color: $primary-color;
+        }
+
+        .cancel-btn {
+            background-color: $default-lightgray;
+        }
+    }
+
+    &-btn {
+        width: 165px;
+        padding: 10px 0;
+        border-radius: 4px;
+        font-size: 16px;
+        text-align: center;
+        cursor: pointer;
+    }
+}

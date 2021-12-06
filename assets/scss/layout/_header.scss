@@ -1,0 +1,277 @@
+@import "~/assets/scss/base/const.scss";
+
+@media screen and (min-width: 1100px) {
+    #header {
+        width: 280px;
+        min-width: 280px;
+
+        .logo {
+            display: flex;
+        }
+
+        .container {
+            width: 280px;
+            padding: 0 10px 50px 50px;
+        }
+
+        .main-menu {
+            ul {
+                li {
+                    i {
+                        margin-right: 10px;
+                    }
+
+                    a {
+                        padding: 3px;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #header {
+        width: 60px;
+        min-width: 60px;
+
+        .logo {
+            display: none;
+        }
+
+        .container {
+            width: 60px;
+            padding: 0;
+        }
+
+        .main-menu {
+            ul {
+                li {
+                    i {
+                        margin-right: 0;
+                    }
+
+                    a {
+                        padding: 15px 0;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+
+        .header-bottom {
+            &-ul {
+                &-li {
+                    &-a {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#header {
+    .logo {
+        align-items: center;
+        width: 100%;
+        min-height: 50px;
+        padding: 40px 0 60px 10px;
+        a {
+            font-size: 30px;
+            font-weight: 400;
+            letter-spacing: 3px;
+        }
+    }
+
+    .container {
+        z-index: 99;
+        background: #fff;
+        box-shadow: 2px 0 10px -5px #ccc;
+        color: $default-black;
+        position: fixed;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .main-menu {
+        height: 70%;
+        width: 100%;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            list-style: none;
+            font-size: 17px;
+
+            li {
+                margin-bottom: 15px;
+                i {
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+
+                a {
+                    display: flex;
+
+                    &.nuxt-link-active {
+                        font-weight: 500;
+                        border-bottom: 2px solid $default-red;
+                        color: $default-red;
+                    }
+                }
+
+                .main-menu-active {
+                    &:hover {
+                        border-bottom: 2px solid $default-red;
+                        color: $default-red;
+                    }
+                }
+            }
+        }
+
+        .main-menu-disable {
+            color: $default-disable;
+            cursor: default;
+
+            &.nuxt-link-active {
+                font-weight: normal;
+            }
+
+            &.nuxt-link-exact-active {
+                color: $default-disable;
+                border: none;
+            }
+
+            &:hover {
+                color: $default-disable;
+                border: none;
+            }
+        }
+    }
+    
+    .header-bottom {
+        width: 100%;
+        &-ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            list-style: none;
+            font-size: 15px;
+            font-weight: 500;
+            color: $default-disable;
+            &-li {
+                &-a {
+                    display: block;
+                    padding: 7px 3px;
+                    border-radius: 3px;
+                    &:hover {
+                        color: $default-black;
+                        background-color: #f0f0f0;
+                    }
+                    &-i {
+                        width: 20px;
+                        font-size: 18px;
+                        text-align: center;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+
+    // header border version
+    // .main-menu {
+    //     height: 70%;
+    //     width: 100%;
+    //     ul {
+    //         margin: 0;
+    //         padding: 0;
+    //         display: flex;
+    //         flex-direction: column;
+    //         justify-content: center;
+    //         list-style: none;
+    //         font-size: 17px;
+    //         li {
+    //             a {
+    //                 padding: 15px 30px;
+    //                 color: #555;
+    //                 display: block;
+    //                 &.nuxt-link-active {
+    //                     font-weight: 400;
+    //                     color: #6333ff;
+    //                 }
+    //                 &.nuxt-link-exact-active {
+    //                     border-left: 10px solid #6333ff;
+    //                 }
+    //                 &:hover {
+    //                     border-left: 10px solid #6333ff;
+    //                     color: #6333ff;
+    //                     // background-color: #38cb89;
+    //                 }
+    //                 i {
+    //                     width: 20px;
+    //                     text-align: center;
+    //                     font-weight: 400;
+    //                 }
+    //             }
+    //         }
+    //     }
+    //     .main-menu-disable {
+    //         color: lightgray;
+    //         cursor: default;
+    //         &.nuxt-link-active {
+    //             font-weight: normal;
+    //         }
+    //         &.nuxt-link-exact-active {
+    //             color: lightgray;
+    //             border: none;
+    //         }
+    //         &:hover {
+    //             color: lightgray;
+    //             border: none;
+    //         }
+    //     }
+    // }
+    // .header-bottom {
+    //     width: 100%;
+    //     border-top: 1px solid #d8d8d8;
+    //     &-ul {
+    //         margin: 0;
+    //         padding: 0;
+    //         display: flex;
+    //         flex-direction: column;
+    //         justify-content: center;
+    //         list-style: none;
+    //         font-size: 15px;
+    //         &-li {
+    //             &-a {
+    //                 display: block;
+    //                 color: #555;
+    //                 padding: 10px 20px;
+    //                 &:hover {
+    //                     border-left: 5px solid #6333ff;
+    //                     color: #6333ff;
+    //                     font-weight: 100;
+    //                     cursor: pointer;
+    //                 }
+    //                 &-i {
+    //                     width: 20px;
+    //                     text-align: center;
+    //                     font-weight: 100;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+    // header border version
+}

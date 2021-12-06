@@ -1,0 +1,12 @@
+.page-component {
+    .page-component__title {
+        flex: 1;
+        font-size: 35px;
+        font-weight: 100;
+        padding: 50px 0 30px;
+        color: #6333ff;
+        &.page-component__title--hasnot {
+            opacity: 0.1;
+        }
+    }
+}

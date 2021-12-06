@@ -1,0 +1,38 @@
+@import "~/assets/scss/base/const.scss";
+
+.schema {
+    &-header {
+        font-size: 16px;
+    }
+
+    &-content {
+        &-list {
+            &-header,
+            &-item {
+                display: grid;
+                width: 100%;
+                grid-template-columns: 45% 31% 9% 6%;
+                grid-column-gap: 3%;
+                align-items: center;
+    
+                input::placeholder {
+                    color: $input-placeholder;
+                }
+
+                .add-schema-btn {
+                    color: $positive-color;
+                }
+            
+                .delete-schema-btn {
+                    color: $denial-color;
+                }
+            }
+        }
+    }
+
+    &-btn {
+        font-size: 25px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+}

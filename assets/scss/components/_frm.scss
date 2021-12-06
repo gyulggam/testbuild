@@ -1,0 +1,138 @@
+.frm-base {
+    .frm-field {
+        margin: 0 0 15px;
+        display: flex;
+        .frm-field__label {
+            width: 200px;
+            display: flex;
+            align-items: center;
+        }
+        .frm-field__input {
+            flex: 1 0 auto;
+            >input {
+                width: 100%;
+                padding: 0.375rem 0.75rem;
+                font-size: 1rem;
+                line-height: 1.5;
+                color: #495057;
+                background-color: #fff;
+                background-clip: padding-box;
+                border: 1px solid #ced4da;
+                border-radius: 0.25rem;
+                transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            }
+            .vs__dropdown-toggle {
+                padding: 0;
+                line-height: 38px;
+                height: 38px;
+                .vs__selected {
+                    padding: 0 5px;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    height: 38px;
+                    line-height: 38px;
+                }
+            }
+        }
+    }
+    .frm-field--group {
+        text-align: left;
+        >h3 {
+            font-weight: 400;
+            font-size: 22px;
+            margin: 0 0 20px;
+        }
+    }
+}
+
+.field-select {
+    margin: 0;
+    width: 80px;
+    flex: 1 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    button.btn {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent;
+        border: none;
+    }
+    button.btn i {
+        font-size: 20px;
+        @include dis(middle);
+    }
+}
+
+.field-wrap {
+    .field-wrap__inner {
+        position: relative;
+        width: auto;
+        display: inline-block;
+        .add-column {
+            margin-top: 0;
+            ul {
+                border: none;
+                li {
+                    padding: 5px 0;
+                    input {
+                        border: none;
+                        font-size: 14px;
+                        text-align: center;
+                        outline: none;
+                    }
+                }
+            }
+        }
+        .field-select {
+            @include dis(middle);
+        }
+        >button.btn {
+            display: inline-block;
+            vertical-align: top;
+            background: transparent;
+            border: none;
+            height: 22px;
+        }
+        >span.border-bottom {
+            width: 80px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+            &+span.border-bottom {
+                margin-left: 20px;
+            }
+        }
+        .btn>i.fa-plus {
+            color: #838383;
+            font-size: 20px;
+        }
+    }
+    .field__tool {
+        position: absolute;
+        left: 100%;
+        top: 0;
+        z-index: 11;
+    }
+}
+
+.field-input {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 5px;
+}
+
+.box-fields {
+    border: 1px solid #ddd;
+    padding: 15px 20px;
+    background: #fff;
+    box-shadow: 0 3px 6px 2px rgb(142 142 142 / 10%);
+    border-radius: 5px;
+    position: relative;
+}

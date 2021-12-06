@@ -1,0 +1,44 @@
+@import "~/assets/scss/base/const.scss";
+
+.plan {
+    &-content {
+        .hooper {
+            height: 100%;
+
+            &-list {
+               width: 80%;
+               padding: 0 15px;
+               font-size: 16px;
+            }
+
+            .plan-btn {
+                width: 30%;
+                border-radius: 5px;
+                padding: 5px 15px;
+                background-color: $default-lightgray;
+
+                &-now {
+                    background-color: $positive-background-color;
+                    color: $default-green;
+                }
+    
+                &-selected {
+                    background-color: $primary-color;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &-storage {
+        padding: 0 12%;
+    }
+
+    &-total-mount {
+        padding: 0 12%;
+    }
+
+    &-current-price {
+        width: 23%;
+    }
+}

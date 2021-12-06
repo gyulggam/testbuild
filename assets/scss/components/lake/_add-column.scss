@@ -1,0 +1,49 @@
+.add-column {
+    margin-top: 10px;
+    ul {
+        border: 1px solid #ccc;
+        padding-left: 0;
+        position: relative;
+        margin-top: 0;
+        background-color: #fff;
+        z-index: 10;
+        li {
+            display: block;
+            width: 100%;
+            list-style: none;
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+    &__type {
+        text-align: center;
+        position: relative;
+        ul {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background: #fff;
+            height: 200px;
+            width: 200px;
+            overflow: auto;
+            li input[type='radio'] {
+                display: none;
+            }
+        }
+        .d-flex {
+            justify-content: center;
+            .ml-auto.btn {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                bottom: 0;
+                border: none;
+                transform: translateY(-50%);
+                background-color: white;
+            }
+        }
+    }
+}

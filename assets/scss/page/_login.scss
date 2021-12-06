@@ -1,0 +1,69 @@
+@import "~/assets/scss/base/const.scss";
+
+.login {
+    &-page {
+        max-width: 1200px;
+
+        &-title {
+            font-size: 50px;
+            font-weight: 500;
+        }
+    
+        &-img-wrap {
+            width: 75%;
+        }
+    
+        &-form-wrap {
+            width: 25%;
+        }
+    
+        &-discription {
+            li {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &-header {
+        flex: 1;
+    }
+
+    &-content {
+        flex: 4;
+    }
+
+    &-form {
+        border-top: 2px solid $default-lightgray;
+
+        .section-card-input {
+            height: 40px;
+            padding: 0 15px;
+            border: none;
+            border-radius: 5px;
+        }
+    }
+
+    &-link {
+        margin-top: 5px;
+    }
+
+    &-btn {
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 10px;
+        padding: 7px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: $primary-color;
+        color: $default-white;
+        cursor: pointer;
+    }
+}
+
+.google-login-btn {
+    padding: 7px 20px;
+    border: 2px solid #c4c4c4;
+    border-radius: 5px;
+    cursor: pointer;
+}

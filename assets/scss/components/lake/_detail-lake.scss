@@ -1,0 +1,36 @@
+.detail-lake-general {
+    &-info {
+        width: 27%;
+        height: 100%;
+    }
+
+    &-region {
+        width: 43%;
+    }
+
+    &-worldmap {
+        width: 20%;
+    }
+
+    &-content {
+        line-height: 30px;
+    }
+
+    &-title {
+        font-size: 19px;
+        font-weight: 500;
+    }
+}
+
+.detail-lake-plan {
+    &-info {
+        width: 70%;
+        height: 100%;
+    }
+
+    &-price-content {
+        padding-top: 14px;
+        font-size: 16px;
+        line-height: 30px;
+    }
+}

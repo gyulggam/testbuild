@@ -1,0 +1,21 @@
+@import "~/assets/scss/base/const.scss";
+
+.stroage {
+    &-wrap {
+        width: 100%;
+        padding: 0 50px 30px;
+    }
+}
+
+//slider plugin style
+.vue-slide-bar {
+    &-tooltip {
+        border-color: $primary-color !important;
+        background-color: $primary-color !important;
+    }
+
+    &-process {
+        background-color: $primary-color !important;
+    }
+}
+//slider plugin style

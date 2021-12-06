@@ -1,0 +1,55 @@
+@import "~/assets/scss/base/const.scss";
+
+.timezone {
+    &-box {
+        input {
+            height: 35px;
+        }
+    }
+    
+    &-select {
+        height: 35px;
+
+        & > div {
+            border: none;
+            background-color: $input-background-color;
+            border-bottom: $default-border;
+        }
+
+        .vs__dropdown-toggle {
+            padding: unset;
+        }
+
+        input {
+            border: none;
+            margin: unset;
+
+            &::placeholder {
+                color: $input-placeholder
+            }
+        }
+    }
+
+    &-utcinfo {
+        height: 35px;
+        font-size: 17px;
+        padding: 0 10px;
+        background-color: $input-background-color;
+
+        &-label {
+            color: $default-disable;
+        }
+    }
+
+    &-content {
+        &-now {
+            padding: 10px 15px;
+            &-label {
+                padding: 0 15px;
+                border-radius: 4px;
+                background-color: $positive-background-color;
+                color: $default-green;
+            }
+        }
+    }
+}
