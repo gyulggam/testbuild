@@ -50,7 +50,7 @@ export const actions = {
     },
 
     async googleLogin() {
-        Auth.federatedSignIn({provider: 'Google'});
+        await Auth.federatedSignIn({provider: 'Google'});
     }
 
 }
