@@ -18,9 +18,9 @@
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda",
-      "lastBuildTimeStamp": "2021-12-06T02:35:12.698Z",
+      "lastBuildTimeStamp": "2021-12-06T06:47:33.323Z",
       "lastBuildType": "PROD",
-      "lastPackageTimeStamp": "2021-12-06T02:35:12.886Z",
+      "lastPackageTimeStamp": "2021-12-06T06:47:33.429Z",
       "distZipFilename": "testbuildb6d1b36aDefineAuthChallenge-7447782f504470737047-build.zip",
       "s3Bucket": {
         "deploymentBucketName": "amplify-testbuild-testdev-113142-deployment",
@@ -30,22 +30,22 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-testbuild-testdev-113142-deployment/amplify-cfn-templates/function/testbuildb6d1b36aDefineAuthChallenge-cloudformation-template.json",
         "logicalId": "functiontestbuildb6d1b36aDefineAuthChallenge"
       },
-      "lastPushTimeStamp": "2021-12-06T02:39:48.019Z",
+      "lastPushTimeStamp": "2021-12-06T06:52:37.327Z",
       "output": {
         "Region": "ap-northeast-2",
         "Arn": "arn:aws:lambda:ap-northeast-2:306064049777:function:testbuildb6d1b36aDefineAuthChallenge-testdev",
         "Name": "testbuildb6d1b36aDefineAuthChallenge-testdev",
         "LambdaExecutionRole": "testbuildb6d1b36aDefineAuthChallenge-testdev"
       },
-      "lastPushDirHash": "HvFNcNnH+06cVX2aLZrAVVnn3L8="
+      "lastPushDirHash": "2xoemQqJf4lV+3bX6dJybpaVVPg="
     },
     "testbuildb6d1b36aCreateAuthChallenge": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda",
-      "lastBuildTimeStamp": "2021-12-06T02:35:12.704Z",
+      "lastBuildTimeStamp": "2021-12-06T06:47:33.326Z",
       "lastBuildType": "PROD",
-      "lastPackageTimeStamp": "2021-12-06T02:35:12.926Z",
+      "lastPackageTimeStamp": "2021-12-06T06:47:33.441Z",
       "distZipFilename": "testbuildb6d1b36aCreateAuthChallenge-526b516651485171786b-build.zip",
       "s3Bucket": {
         "deploymentBucketName": "amplify-testbuild-testdev-113142-deployment",
@@ -55,22 +55,22 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-testbuild-testdev-113142-deployment/amplify-cfn-templates/function/testbuildb6d1b36aCreateAuthChallenge-cloudformation-template.json",
         "logicalId": "functiontestbuildb6d1b36aCreateAuthChallenge"
       },
-      "lastPushTimeStamp": "2021-12-06T02:39:48.019Z",
+      "lastPushTimeStamp": "2021-12-06T06:52:37.327Z",
       "output": {
         "Region": "ap-northeast-2",
         "Arn": "arn:aws:lambda:ap-northeast-2:306064049777:function:testbuildb6d1b36aCreateAuthChallenge-testdev",
         "Name": "testbuildb6d1b36aCreateAuthChallenge-testdev",
         "LambdaExecutionRole": "testbuildb6d1b36aCreateAuthChallenge-testdev"
       },
-      "lastPushDirHash": "JEypn3lbBscNl9EJLSkYg7kXZIs="
+      "lastPushDirHash": "QM/BE8e9BmvbLN/omfPvpWqEQ8E="
     },
     "testbuildb6d1b36aVerifyAuthChallengeResponse": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda",
-      "lastBuildTimeStamp": "2021-12-06T02:35:12.708Z",
+      "lastBuildTimeStamp": "2021-12-06T06:47:33.330Z",
       "lastBuildType": "PROD",
-      "lastPackageTimeStamp": "2021-12-06T02:35:13.252Z",
+      "lastPackageTimeStamp": "2021-12-06T06:47:33.736Z",
       "distZipFilename": "testbuildb6d1b36aVerifyAuthChallengeResponse-41754369457867774975-build.zip",
       "s3Bucket": {
         "deploymentBucketName": "amplify-testbuild-testdev-113142-deployment",
@@ -80,14 +80,14 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-testbuild-testdev-113142-deployment/amplify-cfn-templates/function/testbuildb6d1b36aVerifyAuthChallengeResponse-cloudformation-template.json",
         "logicalId": "functiontestbuildb6d1b36aVerifyAuthChallengeResponse"
       },
-      "lastPushTimeStamp": "2021-12-06T02:39:48.019Z",
+      "lastPushTimeStamp": "2021-12-06T06:52:37.327Z",
       "output": {
         "Region": "ap-northeast-2",
         "Arn": "arn:aws:lambda:ap-northeast-2:306064049777:function:testbuildb6d1b36aVerifyAuthChallengeResponse-testdev",
         "Name": "testbuildb6d1b36aVerifyAuthChallengeResponse-testdev",
         "LambdaExecutionRole": "testbuildb6d1b36aVerifyAuthChallengeResponse-testdev"
       },
-      "lastPushDirHash": "fuSEKcrpmfa+L4FiD2xho+4y8II="
+      "lastPushDirHash": "9QbTOS0BewEbXZcCACJgIb4Kznw="
     }
   },
   "auth": {
@@ -141,13 +141,17 @@
         ],
         "verificationMechanisms": [
           "EMAIL"
-        ]
+        ],
+        "socialProviders": [
+          "GOOGLE"
+        ],
+        "usernameAttributes": []
       },
       "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-testbuild-testdev-113142-deployment/amplify-cfn-templates/auth/testbuildb6d1b36a-cloudformation-template.yml",
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-testbuild-testdev-113142-deployment/amplify-cfn-templates/auth/testbuildb6d1b36a-cloudformation-template.json",
         "logicalId": "authtestbuildb6d1b36a"
       },
-      "lastPushTimeStamp": "2021-12-06T02:39:48.019Z",
+      "lastPushTimeStamp": "2021-12-06T06:52:37.327Z",
       "output": {
         "UserPoolId": "ap-northeast-2_Dp8Jagnaa",
         "AppClientIDWeb": "5ct0804c6fodinigao4ibnicmf",
@@ -155,9 +159,12 @@
         "IdentityPoolId": "ap-northeast-2:dff8465a-da4b-4808-9741-253ff1668303",
         "UserPoolArn": "arn:aws:cognito-idp:ap-northeast-2:306064049777:userpool/ap-northeast-2_Dp8Jagnaa",
         "IdentityPoolName": "testbuildb6d1b36a_identitypool_b6d1b36a__testdev",
-        "UserPoolName": "testbuildb6d1b36a_userpool_b6d1b36a"
+        "UserPoolName": "testbuildb6d1b36a_userpool_b6d1b36a",
+        "CreatedSNSRole": "arn:aws:iam::306064049777:role/snsb6d1b36a113142-testdev",
+        "HostedUIDomain": "testbuildc89ff5aa-c89ff5aa-testdev",
+        "OAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://test.machlake.com/\"],\"LogoutURLs\":[\"https://test.machlake.com/\"]}"
       },
-      "lastPushDirHash": "JFBE20zzHKzTeo4A7nXXyH58OOs="
+      "lastPushDirHash": "RZI/FWTV07CFoGzRWpXNDhcrTcI="
     }
   }
 }
