@@ -49,8 +49,7 @@ export const actions = {
         commit('set', null)
     },
 
-    async googleLogin() {
-        Auth.federatedSignIn('Google');
+    async googleLogin(_) {
+        await Auth.federatedSignIn({provider: 'Google'});
     }
-
 }
