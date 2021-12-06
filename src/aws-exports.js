@@ -16,11 +16,11 @@ const awsmobile = {
             "profile",
             "aws.cognito.signin.user.admin"
         ],
-        "redirectSignIn": "http://localhost:5000/",
-        "redirectSignOut": "http://localhost:5000/",
+        "redirectSignIn": "https://test.machlake.com/",
+        "redirectSignOut": "https://test.machlake.com/",
         "responseType": "code"
     },
-    "federationTarget": "GOOGLE",
+    "federationTarget": "COGNITO_USER_POOLS",
     "aws_cognito_login_mechanisms": [
         "PREFERRED_USERNAME"
     ],
