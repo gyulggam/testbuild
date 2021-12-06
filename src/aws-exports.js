@@ -10,11 +10,11 @@ const awsmobile = {
     "oauth": {
         "domain": "testmachlake.auth.ap-northeast-2.amazoncognito.com",
         "scope": [
-            "phone",
+            // "phone",
             "email",
             "openid",
             "profile",
-            "aws.cognito.signin.user.admin"
+            // "aws.cognito.signin.user.admin"
         ],
         "redirectSignIn": "https://test.machlake.com/",
         "redirectSignOut": "https://test.machlake.com/",
