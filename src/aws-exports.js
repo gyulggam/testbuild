@@ -16,8 +16,8 @@ const awsmobile = {
             "profile",
             "aws.cognito.signin.user.admin"
         ],
-        "redirectSignIn": "https://test.machlake.com/",
-        "redirectSignOut": "https://test.machlake.com/",
+        "redirectSignIn": "https://test.machlake.com/login",
+        "redirectSignOut": "https://test.machlake.com/login",
         "responseType": "code"
     },
     "federationTarget": "COGNITO_USER_POOLS",

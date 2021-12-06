@@ -1,11 +1,11 @@
 
 export default {
     // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-    // server: {
-    //     port: 5000, // default: 3000
-    //     host: 'localhost'
-    // },
-    ssr: true,
+    server: {
+        port: 5000, // default: 3000
+        host: '0.0.0.0'
+    },
+    ssr: false,
 
     env: {
         STRIPE_PK: "pk_test_51JyUa8LxhYn7H10DYl2XbfDCp4rM2oJISiCAYaUyVcMTgAp1Q2Fkq4X2t6HbuguKtAoGQYCzQPAnK2DfbQkotRtY00vrgc3FjZ",
