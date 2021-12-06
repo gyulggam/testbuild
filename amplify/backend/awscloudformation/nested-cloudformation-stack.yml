@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "Root Stack for AWS Amplify Console",
+  "Description": "Root Stack for AWS Amplify CLI",
   "Parameters": {
     "DeploymentBucketName": {
       "Description": "Name of the common deployment bucket provided by the parent stack",
@@ -68,28 +68,118 @@
         }
       }
     },
-    "functionmachlakelocaltestd76c65ddCustomMessage": {
+    "AuthTriggerCustomLambdaStack": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-machlakelocaltest-devback-111521-deployment/amplify-cfn-templates/function/machlakelocaltestd76c65ddCustomMessage-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-testbuild-testdev-113142-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json",
         "Parameters": {
-          "modules": "verification-link",
-          "resourceName": "machlakelocaltestd76c65ddCustomMessage",
-          "deploymentBucketName": "amplify-machlakelocaltest-devback-111521-deployment",
-          "s3Key": "amplify-builds/machlakelocaltestd76c65ddCustomMessage-2f4d687079574d6b6739-build.zip",
-          "env": "devback"
+          "env": "testdev",
+          "userpoolId": {
+            "Fn::GetAtt": [
+              "authtestbuildb6d1b36a",
+              "Outputs.UserPoolId"
+            ]
+          },
+          "userpoolArn": {
+            "Fn::GetAtt": [
+              "authtestbuildb6d1b36a",
+              "Outputs.UserPoolArn"
+            ]
+          },
+          "functiontestbuildb6d1b36aDefineAuthChallengeArn": {
+            "Fn::GetAtt": [
+              "functiontestbuildb6d1b36aDefineAuthChallenge",
+              "Outputs.Arn"
+            ]
+          },
+          "functiontestbuildb6d1b36aDefineAuthChallengeName": {
+            "Fn::GetAtt": [
+              "functiontestbuildb6d1b36aDefineAuthChallenge",
+              "Outputs.Name"
+            ]
+          },
+          "functiontestbuildb6d1b36aCreateAuthChallengeArn": {
+            "Fn::GetAtt": [
+              "functiontestbuildb6d1b36aCreateAuthChallenge",
+              "Outputs.Arn"
+            ]
+          },
+          "functiontestbuildb6d1b36aCreateAuthChallengeName": {
+            "Fn::GetAtt": [
+              "functiontestbuildb6d1b36aCreateAuthChallenge",
+              "Outputs.Name"
+            ]
+          },
+          "functiontestbuildb6d1b36aVerifyAuthChallengeResponseArn": {
+            "Fn::GetAtt": [
+              "functiontestbuildb6d1b36aVerifyAuthChallengeResponse",
+              "Outputs.Arn"
+            ]
+          },
+          "functiontestbuildb6d1b36aVerifyAuthChallengeResponseName": {
+            "Fn::GetAtt": [
+              "functiontestbuildb6d1b36aVerifyAuthChallengeResponse",
+              "Outputs.Name"
+            ]
+          }
+        }
+      },
+      "DependsOn": [
+        "authtestbuildb6d1b36a",
+        "functiontestbuildb6d1b36aDefineAuthChallenge",
+        "functiontestbuildb6d1b36aCreateAuthChallenge",
+        "functiontestbuildb6d1b36aVerifyAuthChallengeResponse"
+      ]
+    },
+    "functiontestbuildb6d1b36aDefineAuthChallenge": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-testbuild-testdev-113142-deployment/amplify-cfn-templates/function/testbuildb6d1b36aDefineAuthChallenge-cloudformation-template.json",
+        "Parameters": {
+          "modules": "captcha-define-challenge",
+          "resourceName": "testbuildb6d1b36aDefineAuthChallenge",
+          "deploymentBucketName": "amplify-testbuild-testdev-113142-deployment",
+          "s3Key": "amplify-builds/testbuildb6d1b36aDefineAuthChallenge-7447782f504470737047-build.zip",
+          "env": "testdev"
         }
       }
     },
-    "authmachlakelocaltest630bd7ba": {
+    "functiontestbuildb6d1b36aCreateAuthChallenge": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-machlakelocaltest-devback-111521-deployment/amplify-cfn-templates/auth/machlakelocaltest630bd7ba-cloudformation-template.yml",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-testbuild-testdev-113142-deployment/amplify-cfn-templates/function/testbuildb6d1b36aCreateAuthChallenge-cloudformation-template.json",
         "Parameters": {
-          "identityPoolName": "machlakelocaltest630bd7ba_identitypool_630bd7ba",
+          "modules": "captcha-create-challenge",
+          "resourceName": "testbuildb6d1b36aCreateAuthChallenge",
+          "deploymentBucketName": "amplify-testbuild-testdev-113142-deployment",
+          "s3Key": "amplify-builds/testbuildb6d1b36aCreateAuthChallenge-526b516651485171786b-build.zip",
+          "env": "testdev"
+        }
+      }
+    },
+    "functiontestbuildb6d1b36aVerifyAuthChallengeResponse": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-testbuild-testdev-113142-deployment/amplify-cfn-templates/function/testbuildb6d1b36aVerifyAuthChallengeResponse-cloudformation-template.json",
+        "Parameters": {
+          "modules": "captcha-verify",
+          "resourceName": "testbuildb6d1b36aVerifyAuthChallengeResponse",
+          "RECAPTCHASECRET": "",
+          "deploymentBucketName": "amplify-testbuild-testdev-113142-deployment",
+          "s3Key": "amplify-builds/testbuildb6d1b36aVerifyAuthChallengeResponse-41754369457867774975-build.zip",
+          "env": "testdev"
+        }
+      }
+    },
+    "authtestbuildb6d1b36a": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-testbuild-testdev-113142-deployment/amplify-cfn-templates/auth/testbuildb6d1b36a-cloudformation-template.yml",
+        "Parameters": {
+          "identityPoolName": "testbuildb6d1b36a_identitypool_b6d1b36a",
           "allowUnauthenticatedIdentities": false,
-          "resourceNameTruncated": "machla630bd7ba",
-          "userPoolName": "machlakelocaltest630bd7ba_userpool_630bd7ba",
+          "resourceNameTruncated": "testbub6d1b36a",
+          "userPoolName": "testbuildb6d1b36a_userpool_b6d1b36a",
           "autoVerifiedAttributes": "email",
           "mfaConfiguration": "OFF",
           "mfaTypes": "SMS Text Message",
@@ -106,10 +196,10 @@
           "userpoolClientRefreshTokenValidity": 30,
           "userpoolClientWriteAttributes": "email",
           "userpoolClientReadAttributes": "email",
-          "userpoolClientLambdaRole": "machla630bd7ba_userpoolclient_lambda_role",
+          "userpoolClientLambdaRole": "testbub6d1b36a_userpoolclient_lambda_role",
           "userpoolClientSetAttributes": false,
-          "sharedId": "630bd7ba",
-          "resourceName": "machlakelocaltest630bd7ba",
+          "sharedId": "b6d1b36a",
+          "resourceName": "testbuildb6d1b36a",
           "authSelections": "identityPoolAndUserPool",
           "authRoleArn": {
             "Fn::GetAtt": [
@@ -123,29 +213,19 @@
               "Arn"
             ]
           },
-          "useDefault": "defaultSocial",
-          "hostedUI": true,
-          "hostedUIDomainName": "machlakelocaltest630bd7ba-630bd7ba",
-          "authProvidersUserPool": "Google",
-          "hostedUIProviderMeta": "[{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid email profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"sub\"}}]",
+          "useDefault": "default",
+          "triggers": "{\n  \"DefineAuthChallenge\": [\n    \"captcha-define-challenge\"\n  ],\n  \"CreateAuthChallenge\": [\n    \"captcha-create-challenge\"\n  ],\n  \"VerifyAuthChallengeResponse\": [\n    \"captcha-verify\"\n  ]\n}",
           "userPoolGroupList": "",
           "serviceName": "Cognito",
           "usernameCaseSensitive": false,
-          "dependsOn": "",
-          "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:5000/\"],\"LogoutURLs\":[\"http://localhost:5000/\"]}",
-          "hostedUIProviderCreds": "[{\"ProviderName\":\"Google\",\"client_id\":\"632034351651-b5ejmm2sd8s0o86c6jc3sb1qetu4j3d9.apps.googleusercontent.com\",\"client_secret\":\"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\"}]",
-          "env": "devback"
-        }
-      }
-    },
-    "hostingamplifyhosting": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-machlakelocaltest-devback-111521-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
-        "Parameters": {
-          "appId": "d34kqdg5qakhc",
-          "type": "manual",
-          "env": "devback"
+          "parentStack": {
+            "Ref": "AWS::StackId"
+          },
+          "authTriggerConnections": "[\n  {\n    \"triggerType\": \"DefineAuthChallenge\",\n    \"lambdaFunctionName\": \"testbuildb6d1b36aDefineAuthChallenge\"\n  },\n  {\n    \"triggerType\": \"CreateAuthChallenge\",\n    \"lambdaFunctionName\": \"testbuildb6d1b36aCreateAuthChallenge\"\n  },\n  {\n    \"triggerType\": \"VerifyAuthChallengeResponse\",\n    \"lambdaFunctionName\": \"testbuildb6d1b36aVerifyAuthChallengeResponse\"\n  }\n]",
+          "breakCircularDependency": true,
+          "permissions": "",
+          "dependsOn": "[object Object],[object Object],[object Object]",
+          "env": "testdev"
         }
       }
     },
@@ -153,7 +233,7 @@
       "DependsOn": [
         "AuthRole",
         "UnauthRole",
-        "authmachlakelocaltest630bd7ba"
+        "authtestbuildb6d1b36a"
       ],
       "Type": "AWS::Lambda::Function",
       "Properties": {
@@ -236,7 +316,7 @@
         },
         "idpId": {
           "Fn::GetAtt": [
-            "authmachlakelocaltest630bd7ba",
+            "authtestbuildb6d1b36a",
             "Outputs.IdentityPoolId"
           ]
         },
