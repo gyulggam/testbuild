@@ -52,8 +52,9 @@ export const actions = {
 
     async googleLogin(_) {
         console.log("Auth", Auth);
+        console.log("CognitoHostedUIIdentityProvider.Google", CognitoHostedUIIdentityProvider.Google);
         try {
-            await Auth.federatedSignIn({provider: CognitoHostedUIIdentityProvider.Google});
+            await Auth.federatedSignIn();
         } catch(aErr) {
             console.log("aErr", aErr);
         }
