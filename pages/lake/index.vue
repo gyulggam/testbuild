@@ -14,14 +14,7 @@
                         <i class="far fa-plus"></i> Lake
                     </button>
                 </div>
-                <div
-                    v-if="
-                        gLakeList &&
-                        ((gLakeList.lake !== null && (gLakeList.lake.length > 0)) ||
-                            (gLakeList.mount !== null && gLakeList.mount.length > 0) ||
-                            (gLakeList.share !== null && gLakeList.share.length > 0))
-                    "
-                >
+                <div v-if="gLakeList && ((gLakeList.lake !== null && (gLakeList.lake.length > 0)))">
                     <LiveLake
                         v-if="tab == 1"
                         :pLakeList="gLakeList.lake"
