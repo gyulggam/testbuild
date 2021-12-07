@@ -6,7 +6,7 @@ const awsmobile = {
     "aws_cognito_identity_pool_id": "ap-northeast-2:dff8465a-da4b-4808-9741-253ff1668303",
     "aws_cognito_region": "ap-northeast-2",
     "aws_user_pools_id": "ap-northeast-2_Dp8Jagnaa",
-    "aws_user_pools_web_client_id": "p0opkn7ssh1b0v54to9lb7jbk",
+    "aws_user_pools_web_client_id": "5ct0804c6fodinigao4ibnicmf",
     "oauth": {
         "domain": "testbuildc89ff5aa-c89ff5aa-testdev.auth.ap-northeast-2.amazoncognito.com",
         "scope": [
