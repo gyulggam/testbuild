@@ -8,7 +8,7 @@ const awsmobile = {
     "aws_user_pools_id": "ap-northeast-2_Dp8Jagnaa",
     "aws_user_pools_web_client_id": "5ct0804c6fodinigao4ibnicmf",
     "oauth": {
-        "domain": "testbuildc89ff5aa-c89ff5aa-testdev.auth.ap-northeast-2.amazoncognito.com",
+        "domain": "testbuildbfe7bf63-bfe7bf63-testdev.auth.ap-northeast-2.amazoncognito.com",
         "scope": [
             "phone",
             "email",
@@ -21,8 +21,9 @@ const awsmobile = {
         "responseType": "code"
     },
     "federationTarget": "COGNITO_USER_POOLS",
-    "aws_cognito_login_mechanisms": [
-        "PREFERRED_USERNAME"
+    "aws_cognito_username_attributes": [],
+    "aws_cognito_social_providers": [
+        "GOOGLE"
     ],
     "aws_cognito_signup_attributes": [
         "EMAIL"
@@ -37,6 +38,9 @@ const awsmobile = {
     },
     "aws_cognito_verification_mechanisms": [
         "EMAIL"
+    ],
+    "aws_cognito_login_mechanisms": [
+        "PREFERRED_USERNAME"
     ]
 };
 

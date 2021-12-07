@@ -9,7 +9,8 @@
       "UnauthRoleName": "amplify-testbuild-testdev-113142-unauthRole",
       "StackName": "amplify-testbuild-testdev-113142",
       "StackId": "arn:aws:cloudformation:ap-northeast-2:306064049777:stack/amplify-testbuild-testdev-113142/abb47680-563c-11ec-9ea7-0212dbc9455e",
-      "AmplifyAppId": "dett7ompb73ra"
+      "AmplifyAppId": "dett7ompb73ra",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-testbuild-testdev-113142-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
     },
     "categories": {
       "function": {
