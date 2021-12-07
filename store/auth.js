@@ -50,6 +50,11 @@ export const actions = {
     },
 
     async googleLogin(_) {
-        await Auth.federatedSignIn({provider: 'Google'});
+        console.log("Auth", Auth);
+        try {
+            await Auth.federatedSignIn({provider: 'Google'});
+        } catch(aErr) {
+            console.log("aErr", aErr);
+        }
     }
 }
