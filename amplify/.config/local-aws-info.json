@@ -1,7 +1,0 @@
-{
-  "testdev": {
-    "configLevel": "project",
-    "useProfile": false,
-    "awsConfigFilePath": "C:\\Users\\manag\\.amplify\\awscloudformation\\on3ZuBVXY5"
-  }
-}
