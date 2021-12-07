@@ -1,4 +1,5 @@
 import { Auth } from 'aws-amplify'
+import { CognitoHostedUIIdentityProvider } from "@aws-amplify/auth/lib/types";
 
 export const state = () => ({
   gIsAuthenticated: false,
@@ -52,7 +53,7 @@ export const actions = {
     async googleLogin(_) {
         console.log("Auth", Auth);
         try {
-            await Auth.federatedSignIn({provider: 'Google'});
+            await Auth.federatedSignIn({provider: CognitoHostedUIIdentityProvider.Google});
         } catch(aErr) {
             console.log("aErr", aErr);
         }
