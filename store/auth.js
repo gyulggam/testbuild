@@ -40,9 +40,26 @@ export const actions = {
 
     async login({ commit }, { username, password }) {
         const sUser = await Auth.signIn(username, password)
-        commit('set', sUser)
+        .then(async aUser => {
+            if (aUser.challengeName === 'NEW_PASSWORD_REQUIRED') {
+                await Auth.completeNewPassword(aUser, password);
+            }
+    
+            await Auth.signIn(username, password)
+            .then(aUser => {
+                commit('set', aUser);
+            });
+        });
+
         return sUser
     },
+
+    // async login({ commit }, { username, password }) {
+    //     const sUser = await Auth.signIn(username, password);
+    //     commit('set', sUser);
+
+    //     return sUser;
+    // },
 
     async logout({ commit }) {
         await Auth.signOut()
